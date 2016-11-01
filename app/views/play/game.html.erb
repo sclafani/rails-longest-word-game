@@ -1,0 +1,18 @@
+<h1>Play game</h1>
+<table>
+  <% i = 0 %>
+  <% 3.times do %>
+  <tr>
+    <% 3.times do %>
+      <td><%= @grid[i] %></td>
+      <% i = i + 1 %>
+      <% end %>
+  </tr>
+  <% end %>
+</table>
+
+<form action="/score">
+  <label for="attempt">Enter attempt</label>
+  <input type="text" id="attempt" name="attempt">
+  <input type="submit" value="Go on!">
+</form>
